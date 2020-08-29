@@ -21,7 +21,6 @@ public class Duke {
         System.out.println("What can I do for you?\n");
         System.out.print( "\n" );
         System.out.print( "____________________________________________________________\n");
-        Scanner in = new Scanner(System.in);
         echo();
     }
 }
