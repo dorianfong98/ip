@@ -1,6 +1,12 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * Duke is a CLI chatbot for managing and tracking tasks.
+ * Currently there are 3 types of tasks Duke can handle:
+ * 1. ToDos: tasks without any date/time attached to it e.g., visit new theme park
+ * 2. Deadlines: tasks that need to be done before a specific date/time e.g., submit report by 11/10/2019 5pm
+ * 3. Events: tasks that start at a specific time and ends at a specific time e.g., team project meeting on 2/10/2019 2-4pm
+ */
 public class Duke {
 
     //Prints list of tasks upon request
@@ -8,14 +14,80 @@ public class Duke {
         int taskNumber = 1;
         printSeparator();
         if(tasks.length == 0) {
-            System.out.println("No tasks available for now. Add tasks to continue.");
+            System.out.println("No tasks to complete for now.");
         }
+        System.out.println(" Here are the tasks in your list: ");
         for(Task task : tasks) {
-            System.out.println(" " + taskNumber + ":[" + task.getStatusIcon() + "] " + task.description);
+            System.out.println(" " + taskNumber + "." + task);
             taskNumber++;
         }
         printSeparator();
     }
+
+    //LEVEL 4 FUNCTIONS
+    public static void addNewTodo(Task[] tasks, String[] splitInput, int taskCount){
+        String description = "";
+        for (int i = 1; i < splitInput.length; i++) {
+            description += splitInput[i] + " ";
+        }
+        tasks[taskCount] = new Todo(description);
+    }
+
+    public static void addNewDeadline(Task[] tasks, String[] splitInput, int taskCount) {
+        String description;
+        String by;
+        int indexOfBy = 0;
+        for (int i = 0; i < splitInput.length; i++) {
+            if (splitInput[i].equals("/by")) {
+                indexOfBy = i;
+                break;
+            }
+        }
+        description = getDescription(splitInput, indexOfBy);
+        by = getDetails(splitInput, indexOfBy);
+        tasks[taskCount] = new Deadline(description, by);
+    }
+
+    public static void addNewEvent(Task[] tasks, String[] splitInput, int taskCount){
+        String at;
+        int indexOfAt = 0;
+        String description = getDescription(splitInput, indexOfAt);
+
+        for (int i = 0; i < splitInput.length; i++) {
+            if (splitInput[i].equals("/at")) {
+                indexOfAt = i;
+                break;
+            }
+        }
+        description = getDescription(splitInput, indexOfAt);
+        at = getDetails(splitInput, indexOfAt);
+        tasks[taskCount] = new Event(description, at);
+    }
+
+    public static String getDescription(String[] splitInput, int indexOfBy) {
+        String description = "";
+        for (int i = 0; i < indexOfBy; i++) {
+            description += splitInput[i] + " ";
+        }
+        return description;
+    }
+    public static String getDetails(String[] splitInput, int indexOfBy) {
+        String details = "";
+        for (int i = indexOfBy + 1; i < splitInput.length; i++) {
+            details += splitInput[i] + " ";
+        }
+        return details;
+    }
+
+    public static void printConfirmation(Task[] tasks, int taskCount) {
+        int numberOfTasks = taskCount + 1;
+        printSeparator();
+        System.out.println(" Got it, I've added this task: ");
+        System.out.println("   " + tasks[taskCount]);
+        System.out.println(" Now you have " + numberOfTasks + " task(s) in the list.");
+        printSeparator();
+    }
+
 
     //Adds new task
     public static void taskAdder(Task[] tasks, String description, int taskCount) {
@@ -57,7 +129,7 @@ public class Duke {
 
     public static void main(String[] args) {
         String userInput;
-        String[] command;
+        String[] splitInput;
         boolean isFinished = true;
         Task[] tasks = new Task[100];
         int taskCount = 0;
@@ -72,8 +144,8 @@ public class Duke {
         //Loops infinitely until user inputs "bye"
         while(isFinished) {
             userInput = in.nextLine();
-            command = userInput.split(" ");
-            switch (command[0]) {
+            splitInput = userInput.split(" ");
+            switch (splitInput[0]) {
             case "bye":
                 isFinished = false;
                 break;
@@ -82,6 +154,21 @@ public class Duke {
                 break;
             case "done":
                 markTaskAsDone(tasks, userInput, taskCount);
+                break;
+            case "todo":
+                addNewTodo(tasks, splitInput, taskCount);
+                printConfirmation(tasks, taskCount);
+                taskCount++;
+                break;
+            case "deadline":
+                addNewDeadline(tasks, Arrays.copyOfRange(splitInput, 1, splitInput.length), taskCount);
+                printConfirmation(tasks, taskCount);
+                taskCount++;
+                break;
+            case "event":
+                addNewEvent(tasks, Arrays.copyOfRange(splitInput, 1, splitInput.length), taskCount);
+                printConfirmation(tasks, taskCount);
+                taskCount++;
                 break;
             default:
                 //Add new task into tasks array

@@ -1,3 +1,7 @@
+/**
+ * The Task class provides a reference for more specific types of Task objects, and stores description and status.
+ */
+
 public class Task {
     protected String description;
     protected boolean isDone;
@@ -12,8 +16,13 @@ public class Task {
         return (isDone ? "\u2713" : "\u2718");
     }
 
-    //Set isDone to true
+    //Sets isDone to true
     public void markAsDone() {
         isDone = true;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + getStatusIcon() + "] " + description;
     }
 }
