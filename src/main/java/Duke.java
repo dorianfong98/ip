@@ -25,12 +25,16 @@ public class Duke {
     }
 
     //LEVEL 4 FUNCTIONS
-    public static void addNewTodo(Task[] tasks, String[] splitInput, int taskCount){
+    public static void addNewTodo(Task[] tasks, String[] splitInput, int taskCount) throws DukeException {
+
         String description = "";
         for (int i = 1; i < splitInput.length; i++) {
             description += splitInput[i] + " ";
         }
         tasks[taskCount] = new Todo(description);
+        if (description.equals("")) {
+            throw new DukeException("☹ OOPS!!! The description of a todo cannot be empty.");
+        }
     }
 
     public static void addNewDeadline(Task[] tasks, String[] splitInput, int taskCount) {
@@ -145,38 +149,40 @@ public class Duke {
         while(isFinished) {
             userInput = in.nextLine();
             splitInput = userInput.split(" ");
-            switch (splitInput[0]) {
-            case "bye":
-                isFinished = false;
-                break;
-            case "list":
-                printList(Arrays.copyOf(tasks, taskCount));
-                break;
-            case "done":
-                markTaskAsDone(tasks, userInput, taskCount);
-                break;
-            case "todo":
-                addNewTodo(tasks, splitInput, taskCount);
-                printConfirmation(tasks, taskCount);
-                taskCount++;
-                break;
-            case "deadline":
-                addNewDeadline(tasks, Arrays.copyOfRange(splitInput, 1, splitInput.length), taskCount);
-                printConfirmation(tasks, taskCount);
-                taskCount++;
-                break;
-            case "event":
-                addNewEvent(tasks, Arrays.copyOfRange(splitInput, 1, splitInput.length), taskCount);
-                printConfirmation(tasks, taskCount);
-                taskCount++;
-                break;
-            default:
-                //Add new task into tasks array
-                taskAdder(tasks, userInput, taskCount);
-                taskCount++;
-                break;
+            try {
+                switch (splitInput[0]) {
+                case "bye":
+                    isFinished = false;
+                    break;
+                case "list":
+                    printList(Arrays.copyOf(tasks, taskCount));
+                    break;
+                case "done":
+                    markTaskAsDone(tasks, userInput, taskCount);
+                    break;
+                case "todo":
+                    addNewTodo(tasks, splitInput, taskCount);
+                    printConfirmation(tasks, taskCount);
+                    taskCount++;
+                    break;
+                case "deadline":
+                    addNewDeadline(tasks, Arrays.copyOfRange(splitInput, 1, splitInput.length), taskCount);
+                    printConfirmation(tasks, taskCount);
+                    taskCount++;
+                    break;
+                case "event":
+                    addNewEvent(tasks, Arrays.copyOfRange(splitInput, 1, splitInput.length), taskCount);
+                    printConfirmation(tasks, taskCount);
+                    taskCount++;
+                    break;
+                default:
+                    throw new DukeException("☹ OOPS!!! I'm sorry, but I don't know what that means :-(");
+                }
+            } catch (DukeException e) {
+                System.out.println(e.errorMessage);
             }
         }
+
 
         printSeparator();
         System.out.println(" Bye. Hope to see you again soon!");
