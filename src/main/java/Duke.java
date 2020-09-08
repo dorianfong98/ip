@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Duke is a CLI chatbot for managing and tracking tasks.
- * Currently there are 3 types of tasks Duke can handle:
+ * Currently, there are 3 types of tasks Duke can handle:
  * 1. ToDos: tasks without any date/time attached to it e.g., visit new theme park
  * 2. Deadlines: tasks that need to be done before a specific date/time e.g., submit report by 11/10/2019 5pm
  * 3. Events: tasks that start at a specific time and ends at a specific time e.g., team project meeting on 2/10/2019 2-4pm
