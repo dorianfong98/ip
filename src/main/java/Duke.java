@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class Duke {
 
-    //Prints list of tasks upon request
+    //Prints a list of tasks upon request
     public static void printList(Task[] tasks) {
         int taskNumber = 1;
         printSeparator();
