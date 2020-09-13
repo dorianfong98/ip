@@ -1,7 +1,7 @@
 /**
  * The Todo class inherits from the Task class.
  * E.g. of input: todo borrow book
- * E.g. of output: [T][✓] join sports club
+ * E.g. of output: [T][✓] join sport club
  */
 
 public class Todo extends Task {
