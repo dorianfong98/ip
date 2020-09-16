@@ -1,3 +1,5 @@
+package duke.tasks;
+
 /**
  * The Task class provides a reference for more specific types of Task objects, and stores description and status.
  */
@@ -19,6 +21,10 @@ public class Task {
     //Sets isDone to true
     public void markAsDone() {
         isDone = true;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     @Override

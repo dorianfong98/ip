@@ -1,3 +1,5 @@
+package duke.exceptions;
+
 /**
  * Exceptions specific to Duke
  */
@@ -7,5 +9,9 @@ public class DukeException extends Exception {
 
     public DukeException (String errorMessage) {
         this.errorMessage = errorMessage;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
     }
 }

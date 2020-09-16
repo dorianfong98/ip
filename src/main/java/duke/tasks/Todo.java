@@ -1,3 +1,5 @@
+package duke.tasks;
+
 /**
  * The Todo class inherits from the Task class.
  * E.g. of input: todo borrow book
@@ -5,6 +7,7 @@
  */
 
 public class Todo extends Task {
+
     public Todo(String description) {
         super(description);
     }

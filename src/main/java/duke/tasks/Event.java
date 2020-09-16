@@ -1,3 +1,5 @@
+package duke.tasks;
+
 /**
  * The Event class inherits from the Task class.
  * E.g. of input: event project meeting /at Mon 2-4pm

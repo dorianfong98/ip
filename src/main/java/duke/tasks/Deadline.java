@@ -1,3 +1,5 @@
+package duke.tasks;
+
 /**
  * The Deadline class inherits from the Task class.
  * E.g. of input: deadline return book /by Sunday
