@@ -311,7 +311,7 @@ public class Duke {
     }
 
     /**
-     * Recreates tasks array by reading data from file. If no file available, create new file
+     * Recreates tasks array by reading data from file. If no file is available, create new file
      */
     public static void readFileContents(ArrayList<Task> tasks) throws IOException {
         File f = new File(FILE_PATH);
