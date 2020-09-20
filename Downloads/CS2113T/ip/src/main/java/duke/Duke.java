@@ -200,7 +200,7 @@ public class Duke {
     }
 
     /**
-     * Print list of tasks when user requests
+     * Prints list of tasks when user requests
      *
      * @params tasks  Array of current stored tasks
      */
