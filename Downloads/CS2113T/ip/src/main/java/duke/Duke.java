@@ -14,8 +14,8 @@ public class Duke {
     public static final String COMMAND_DEADLINE = "deadline";
     public static final String COMMAND_EVENT = "event";
 
-    public static final String MESSAGE_TASK_MARKED = "NICE! (｡◕‿‿◕｡) I've marked the task as done!:";
-    public static final String MESSAGE_TASK_DELETED = "Alright! I've removed this task from the list:";
+    public static final String MESSAGE_TASK_MARKED = "Nice! I've marked the task as done!:";
+    public static final String MESSAGE_TASK_DELETED = "Noted. I've removed this task from the list:";
 
     //Exception Messages
     public static final String EXCEPTION_INVALID_COMMAND = "I do not know what that means ;-;, please try again!";

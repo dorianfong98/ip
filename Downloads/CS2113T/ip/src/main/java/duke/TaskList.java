@@ -17,7 +17,7 @@ public class TaskList {
 
     public static final String BLANK_SPACE = "";
     public static final String COMMAND_TODO = "todo";
-    public static final String EXCEPTION_EMPTY_TODO = "Oh no! The description of the todo cannot be empty ;-;";
+    public static final String EXCEPTION_EMPTY_TODO = "Oops! The description of the todo cannot be empty";
     public static final String DEFAULT_DATE = "9999-12-31";
     public static final String DATE_FORMAT = "MMM d yyyy";
 
