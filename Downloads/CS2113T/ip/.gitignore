@@ -16,6 +16,6 @@ bin/
 /text-ui-test/ACTUAL.txt
 text-ui-test/EXPECTED-UNIX.TXT
 
-/walter.txt
-/artifacts/ip_jar/walter.jar
-/artifacts/ip_jar/walter.txt
+/duke.txt
+/artifacts/ip_jar/duke.jar
+/artifacts/ip_jar/duke.txt
