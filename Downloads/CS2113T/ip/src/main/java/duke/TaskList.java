@@ -12,7 +12,9 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 import static java.util.stream.Collectors.toList;
-
+/**
+ * This TaskList class manages the features of the individual tasks of the taskList
+ */
 public class TaskList {
 
     public static final String BLANK_SPACE = "";

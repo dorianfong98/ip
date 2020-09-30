@@ -5,6 +5,9 @@ import duke.tasks.Task;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * This UI class manages the user interface and the messages being printed to the user
+ */
 public class Ui {
 
     //ASCII art
