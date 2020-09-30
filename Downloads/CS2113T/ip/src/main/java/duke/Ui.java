@@ -5,10 +5,13 @@ import duke.tasks.Task;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * This UI class manages the user interface and the messages being printed to the user
+ */
 public class Ui {
 
-    //ASCII art logos
-    public static final String END_LOGO =
+    //ASCII art
+    public static final String BYE_ART =
             "$$$$$$$\\ $$\\     $$\\ $$$$$$$$\\ \n"
             + "$$  __$$\\\\$$\\   $$  |$$  _____|\n"
             + "$$ |  $$ |\\$$\\ $$  / $$ |      \n"
@@ -68,7 +71,7 @@ public class Ui {
     public void printClosingSequence() {
         printSeparator();
         System.out.println(MESSAGE_CLOSING);
-        System.out.println(END_LOGO);
+        System.out.println(BYE_ART);
         printSeparator();
     }
 
@@ -129,8 +132,19 @@ public class Ui {
     public static void printScheduleForDay(ArrayList<Task> tasksOnDay, String formattedDate) {
         int taskCount = 1;
         printSeparator();
-        System.out.println("Here are the events you have on " + formattedDate + ":");
+        System.out.println("Hi! You have the following events on " + formattedDate + ":");
         for (Task task : tasksOnDay) {
+            String taskNumber = " " + taskCount + ". ";
+            System.out.println(taskNumber + task.toString());
+            taskCount++;
+        }
+        printSeparator();
+    }
+    public static void printSearchResults(ArrayList<Task> searchResults, String searchTerm) {
+        int taskCount = 1;
+        printSeparator();
+        System.out.println("Here are your search resultst for: " + searchTerm);
+        for (Task task : searchResults) {
             String taskNumber = " " + taskCount + ". ";
             System.out.println(taskNumber + task.toString());
             taskCount++;

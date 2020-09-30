@@ -12,14 +12,24 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 import static java.util.stream.Collectors.toList;
-
+/**
+ * This TaskList class manages the features of the individual tasks of the taskList
+ */
 public class TaskList {
 
     public static final String BLANK_SPACE = "";
-    public static final String COMMAND_TODO = "todo";
-    public static final String EXCEPTION_EMPTY_TODO = "Oops! The description of the todo cannot be empty";
+
+    public static final String EXCEPTION_EMPTY_TODO = "Oh no! The description of the todo cannot be empty ;-;";
+    public static final String EXCEPTION_EMPTY_DATE = "Oh no! The please enter a date in YYYY-MM-DD format!";
+    public static final String EXCEPTION_EMPTY_SEARCHTERM = "Oh no! The search term cannot be empty!";
+
     public static final String DEFAULT_DATE = "9999-12-31";
     public static final String DATE_FORMAT = "MMM d yyyy";
+
+    public static final String COMMAND_TODO = "todo";
+    public static final String COMMAND_FIND = "find";
+    public static final String COMMAND_SCHEDULE = "schedule";
+
 
     public ArrayList<Task> taskList;
 
@@ -49,6 +59,21 @@ public class TaskList {
         }
 
         taskList.add(new Todo(taskDescription));
+    }
+    public void findTask(String userInput) throws DukeException {
+        String searchTerm = Parser.removeCommandFromInput(userInput, COMMAND_FIND);
+
+        //Check for exception where user input for task is empty
+        if (searchTerm.equals(BLANK_SPACE)) {
+            throw new DukeException(EXCEPTION_EMPTY_SEARCHTERM);
+        }
+
+        //Filter for tasks with searchterm using stream
+        ArrayList<Task> searchResults = (ArrayList<Task>) taskList.stream()
+                .filter((s) -> s.toString().contains(searchTerm))
+                .collect(toList());
+
+        Ui.printSearchResults(searchResults, searchTerm);
     }
 
     /**
