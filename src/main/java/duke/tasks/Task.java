@@ -1,10 +1,13 @@
 package duke.tasks;
 
 /**
- * The Task class provides a reference for more specific types of Task objects, and stores description and status.
+ * The duke.tasks.Task class provides a template for the duke.tasks.Task object where description and status is stored
  */
+public abstract class Task {
 
-public class Task {
+    public static final String TICK_ICON = "\u2713";
+    public static final String CROSS_ICON = "\u2718";
+
     protected String description;
     protected boolean isDone;
 
@@ -13,19 +16,27 @@ public class Task {
         this.isDone = false;
     }
 
-    //Returns symbol corresponding to completion status of task
     public String getStatusIcon() {
-        return (isDone ? "\u2713" : "\u2718");
+        return (isDone ? TICK_ICON : CROSS_ICON);
     }
 
-    //Sets isDone to true
-    public void markAsDone() {
+    public boolean getStatus() {
+        return isDone;
+    }
+
+    public void setAsDone() {
         isDone = true;
     }
 
     public String getDescription() {
         return description;
     }
+
+    public abstract String getTaskIcon();
+
+    public abstract String getTimingInformation();
+
+    public abstract String getDate();
 
     @Override
     public String toString() {
