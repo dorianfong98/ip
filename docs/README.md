@@ -38,7 +38,7 @@ java -jar ip.jar
 You will be greeted with a welcome screen from Duke on successful launch.
 *Notice how a new save file is created if no previous save file exists in the same directory as `duke.jar`.*\
 \
-![Start up screen image]()
+![Start up screen image](https://github.com/dorianfong98/ip/blob/master/docs/images/startscreen.png)
 1. You are now ready to use *Duke*. Type commands into the **terminal** window and press enter to get *Duke* 
 to execute commands. e.g. typing `help` and pressing enter will bring up all available commands.\
 Here are some example commands you can try:
@@ -67,7 +67,7 @@ But ensure that you use the **required `YYYY-MM-DD` format** when inputting date
 Displays all available commands on the terminal.\
 Format: `help`
 
-![Help command image]()
+![Help command image](https://github.com/dorianfong98/ip/blob/master/docs/images/help.png)
 
 ---
 
