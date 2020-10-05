@@ -1,4 +1,10 @@
-%User Guide | Duke iP
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>User Guide | Duke iP</title>
+    </head>
+</html>
 
 # User Guide
 Welcome to Duke!
