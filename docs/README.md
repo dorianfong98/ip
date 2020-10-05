@@ -19,7 +19,7 @@ Get focused, be productive, and do your best work today with Duke.
   * [Clearing all tasks: `clear`](#clearing-all-tasks-clear)
   * [Exiting the program: `bye`](#exiting-the-program-bye)
   * [Saving your data](#saving-your-data)
-* [FAQs](#faq)
+* [FAQs](#faqs)
 * [Command Summary](#command-summary)
 
 ---
