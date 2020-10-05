@@ -1,3 +1,5 @@
+<title>User Guide | Duke iP </title>
+
 # User Guide
 Welcome to Duke!
 
@@ -19,8 +21,8 @@ Get focused, be productive, and do your best work today with Duke.
   * [Clearing all tasks: `clear`](#clearing-all-tasks-clear)
   * [Exiting the program: `bye`](#exiting-the-program-bye)
   * [Saving your data](#saving-your-data)
-* [FAQ](#faq)
-* [Command Summary](#summary-of-commands)
+* [FAQs](#faq)
+* [Command Summary](#command-summary)
 
 ---
   
@@ -196,12 +198,12 @@ Format: `delete INDEX`
 * `delete 1` 
 
 deletes the first task from `list`
-![Delete1 command image]()
+![Delete1 command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/delete1.png)
 
 * `delete 3` 
 
 deletes the third task from `list`
-![Delete3 command image]()
+![Delete3 command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/delete3.png)
 
 ---
 
@@ -224,7 +226,7 @@ a new save file.
 
 ---
 
-## FAQ
+## FAQs
 **Q:** Can I move my save data to another location/Computer?\
 **A:** Yes you can. After downloading `Duke.jar` onto the other device, you can either:
 1. Create a copy of the current `Duke.txt` save file in the same directory of `Duke.jar` being launching 
@@ -240,9 +242,9 @@ the `/at` identifier for `event` command and `/by` for `deadline` command. If su
 
 ---
 
-## Summary of commands
+## Command Summary
 
-Command | Formatting with Examples
+Command | Formatting, Examples
 --------|-----------------
 **Help**|`help`
 **Todo**|`todo TASK_DESCRIPTION` e.g.,`todo Read lecture notes`
