@@ -28,8 +28,8 @@ Get focused, be productive, and do your best work today with Duke.
 1. Ensure that you have installed Java `11`.
 2. Download the latest `ip.jar` [here](https://github.com/dorianfong98/ip/releases/tag/v1.0).
 3. Copy the jar file to any location/folder on your computer.\
-*(Note: On the first launch of `ip.jar`, a save file will be created in the same directory
-as the jar file)*
+(Note that when you first run `ip.jar`, a file to save your data, `Duke.txt`, will be created in the same directory
+as `ip.jar`)
 4. Open a new *terminal* window and navigate to the same directory where your `duke.jar` is located.
 5. Enter the following command into the *terminal* window to launch the application:
 ````
@@ -232,7 +232,8 @@ the `/at` identifier for `event` command and `/by` for `deadline` command. If su
 *e.g `2020-10-09` will be reformatted into `Oct 09 2020` in the task description.*
 
 **Q:** Why am I receiving an ArrayOutOfBounds Error when Duke ran fine the last time I ran it?
-**A:** Try deleting the existing Duke.txt file in the directory of your ip.jar and run `java -jar ip.jar` in your terminal again. 
+**A:** This is probably due to the fact that you didn't exit the program properly the previous session (using the `bye` command). 
+Try deleting the existing Duke.txt file in the directory of your `ip.jar` and run `java -jar ip.jar` in your terminal again. 
 
 If you require any more technical assistance with Duke, feel free to contact the developer at [dorianfong@u.nus.edu](mailto:dorianfong@u.nus.edu). 
 
