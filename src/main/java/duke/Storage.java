@@ -18,7 +18,7 @@ public class Storage {
 
     //File Path and other constants
     public static final String SAVE_DELIMITER = "--";
-    public static final String FILE_MESSAGE_CREATED_SUCCESS = "Save file creation successful! :D";
+    public static final String FILE_MESSAGE_CREATED_SUCCESS = "Save file successfully created!";
     public static final String FILE_MESSAGE_NO_SAVE_DETECTED = "No previous saves detected! Creating save file...";
     public static final String TODO_ICON = "[T]";
     public static final String DEADLINE_ICON = "[D]";

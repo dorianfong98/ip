@@ -33,10 +33,10 @@ public class Ui {
 
     //General UI messages
     public static final String MESSAGE_TASK_ADDED_CONFIRM = " Got it, I've added this task: ";
-    public static final String MESSAGE_WELCOME_TO = "Hello, welcome to\n";
+    public static final String MESSAGE_WELCOME_TO = "Welcome to\n";
     public static final String MESSAGE_INTRO_GREETING = " Hello! I'm Duke";
     public static final String MESSAGE_INTRO_DUKE_QUERY = " What can I do for you?";
-    public static final String MESSAGE_CLOSING = " Bye. Hope to see you again soon!";
+    public static final String MESSAGE_CLOSING = " Hope to see you again soon!";
     public static final String MESSAGE_DOUBLE_WHITESPACE = "   ";
     public static final String MESSAGE_LINE_SEPARATOR =
             "______________________________________________________________________________";
@@ -70,8 +70,8 @@ public class Ui {
     /** Prints closing sequence */
     public void printClosingSequence() {
         printSeparator();
-        System.out.println(MESSAGE_CLOSING);
         System.out.println(BYE_ART);
+        System.out.println(MESSAGE_CLOSING);
         printSeparator();
     }
 
