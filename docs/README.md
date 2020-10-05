@@ -12,7 +12,7 @@ Get focused, be productive, and do your best work today with Duke.
   * [Adding an event task: `event`](#adding-an-event-task-event)
   * [Adding a deadline task: `deadline`](#adding-a-deadline-task-deadline)
   * [Viewing all tasks: `list`](#viewing-all-tasks-list)
-  * [Setting a task as done: `done`]()
+  * [Setting a task as done: `done`](#setting-a-task-as-done-done)
   * [Looking for a task: `find`](#looking-for-a-task-find)
   * [Looking for all tasks on a date: `schedule`](#looking-for-all-tasks-on-a-date-schedule)
   * [Deleting a task: `delete`](#deleting-a-task-delete)
@@ -128,7 +128,7 @@ Adds deadline `Pay NUS school fees (By: Oct 31 2020)`.
 Displays all available tasks on the task list.\
 Format: `list`
 
-![list command image]()
+![list command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/list.png)
 
 ---
 
@@ -143,7 +143,7 @@ Format: `done INDEX`
 **Example:**
 * `done 3` marks the third task on the `list` as done. Good job! :)
 
-![Done command image]()
+![Done command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/done.png)
 
 ---
 
