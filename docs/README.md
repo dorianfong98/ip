@@ -19,7 +19,7 @@ Get focused, be productive, and do your best work today with Duke.
   * [Clearing all tasks: `clear`](#clearing-all-tasks-clear)
   * [Exiting the program: `bye`](#exiting-the-program-bye)
   * [Saving your data](#saving-your-data)
-* [FAQs](#faqs)
+* [FAQ](#faq)
 * [Command Summary](#command-summary)
 
 ---
@@ -224,16 +224,9 @@ a new save file.
 
 ---
 
-## FAQs
-**Q:** Can I move my save data to another location/Computer?\
-**A:** Yes you can. After downloading `Duke.jar` onto the other device, you can either:
-1. Create a copy of the current `Duke.txt` save file in the same directory of `Duke.jar` being launching 
-the application **OR**
-2. Replace the save file `Duke.txt` that was created by the program and found in the same directory as `Duke.jar`
-with your own save file.
-
+## FAQ
 **Q:** Why does the `schedule` command not return a task that falls on the same date as the given date?\
-**A:** Ensure that when the original task was created, your date was inputted in the required format of `YYYY-MM-DD`, after 
+**A:** Check that for the task in question, you had inputted the date in the required format of `YYYY-MM-DD`, after 
 the `/at` identifier for `event` command and `/by` for `deadline` command. If successful, the input date in the 
 `YYYY-MM-DD` format will be automatically reformatted into a `MMM-DD-YYYY` format.\
 *e.g `2020-10-09` will be reformatted into `Oct 09 2020` in the task description.*
