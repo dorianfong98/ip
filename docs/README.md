@@ -67,7 +67,7 @@ But ensure that you use the **required `YYYY-MM-DD` format** when inputting date
 Displays all available commands on the terminal.\
 Format: `help`
 
-![Help command image](https://github.com/dorianfong98/ip/blob/master/docs/images/help.png)
+![Help command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/startscreen.png)
 
 ---
 
