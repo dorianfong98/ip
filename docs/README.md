@@ -39,11 +39,11 @@ You will be greeted with a welcome screen from Duke on successful launch.
 *Notice how a new save file is created if no previous save file exists in the same directory as `duke.jar`.*\
 \
 ![Start up screen image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/help.png)
-1. You are now ready to use *Duke*. Type commands into the **terminal** window and press enter to get *Duke* 
-to execute commands. e.g. typing `help` and pressing enter will bring up all available commands.\
-Here are some example commands you can try:
-    * `help`: Brings up all available commands.
-    * `todo Buy lunch`: Adds a todo task with description `Buy lunch` to the task list.
+1. You are now ready to use *Duke*. Start by entering a command into the **terminal** window.
+
+Here are some examples of commands that you can enter:
+    * `help`: Displays a list of all available commands.
+    * `todo Print notes`: Adds a todo task with its description, `Print notes`, to your current task list.
     * `event Coffee Date /at Starbucks 2020-11-09`: Adds an event with description `Coffee Date (At: Starbucks Nov 9 2020)` 
     to the task list.
     * `list`: Lists all available tasks.
