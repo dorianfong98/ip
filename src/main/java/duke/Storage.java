@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * The Storage class handles all file reading and writing operations for Duke.
+ */
 public class Storage {
 
     //File Path and other constants

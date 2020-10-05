@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Duke is a CLI chat bot to help you manage your tasks
+ * Duke is a CLI chatbot to help you manage your tasks
  */
 public class Duke {
     //Identifiers and values

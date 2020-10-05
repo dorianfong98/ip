@@ -8,6 +8,9 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 public class Parser {
+    /**
+     * The Parser class handles text parsing for Duke.
+     */
     //Exception messages
     public static final String EXCEPTION_EMPTY_FIELD = "Oh no... You have to enter a task number. Please try again!";
     public static final String EXCEPTION_TIMEDEVENT_INTRO = "Oh no! ;-;\nThe ";
@@ -45,13 +48,24 @@ public class Parser {
         return modifiedString.split(identifier);
     }
 
-    /** Checks for invalid command and throws DukeException */
+    /**
+     * Checks for invalid command and throws DukeException.
+     *
+     * @param splitUserInput Original user typed string split by whitespace.
+     * @throws DukeException Thrown when invalid inut length.
+     */
     public static void checkForValidInput(String[] splitUserInput) throws DukeException {
         if (splitUserInput.length == 1) {
             throw new DukeException(EXCEPTION_EMPTY_FIELD);
         }
     }
 
+    /**
+     * Validates arguments for events with time descriptions.
+     *
+     * @param informationStrings Arguments split by whitespaces.
+     * @param eventIdentifier Identifier to distinguish events and deadlines.
+     */
     public static void checkForValidFieldEntered(String[] informationStrings, String command, String eventIdentifier)
             throws DukeException {
         boolean fieldsArePresent = true;
@@ -73,7 +87,11 @@ public class Parser {
         }
     }
 
-    /** Returns an arraylist which contains information to replace date in original string */
+    /**
+     * Returns an arraylist containing the information to replace the date in the original string.
+     *
+     * @param timeInformation The original field entered by the user after the task identifier.
+     */
     public static ArrayList<String> determineDateInformation(String timeInformation) {
         String[] splitTimeInformation = timeInformation.split(WHITESPACE_IDENTIFIER);
         ArrayList<String> replacementStrings = new ArrayList<>();
@@ -94,6 +112,11 @@ public class Parser {
         return replacementStrings;
     }
 
+    /**
+     * Formats date object into specified format and returns both original and formatted strings.
+     *
+     * @param stringInformation Date information in string form.
+     */
     public static ArrayList<String> formatDateInformation(String stringInformation) {
         LocalDate taskDate;
         ArrayList<String> replacementStrings = new ArrayList<>();
