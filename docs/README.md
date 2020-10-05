@@ -38,7 +38,7 @@ java -jar ip.jar
 You will be greeted with a welcome screen from Duke on successful launch.
 *Notice how a new save file is created if no previous save file exists in the same directory as `duke.jar`.*\
 \
-![Start up screen image](https://github.com/dorianfong98/ip/blob/master/docs/images/startscreen.png)
+![Start up screen image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/help.png)
 1. You are now ready to use *Duke*. Type commands into the **terminal** window and press enter to get *Duke* 
 to execute commands. e.g. typing `help` and pressing enter will bring up all available commands.\
 Here are some example commands you can try:
