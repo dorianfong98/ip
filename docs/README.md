@@ -133,7 +133,7 @@ Format: `list`
 ---
 
 ### Marking a task as done: `done`
-Sets the specified task as done.\
+Marks a specified task as done.\
 Format: `done INDEX`
 
 * Sets the task as done at the specified `INDEX`.
