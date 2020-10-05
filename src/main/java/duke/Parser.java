@@ -148,7 +148,11 @@ public class Parser {
         return userInput.split(WHITESPACE_IDENTIFIER);
     }
 
-    /** Determines command from string */
+    /**
+     * Returns the command, the first element, from the user input
+     *
+     * @param splitUserInput
+     */
     public String determineCommand(String[] splitUserInput) {
         return splitUserInput[0];
     }

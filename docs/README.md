@@ -26,12 +26,12 @@ Get focused, be productive, and do your best work today with Duke.
   
 ## Quick Start
 1. Ensure that you have installed Java `11`.
-1. Download the latest `ip.jar` [here](https://github.com/dorianfong98/ip/releases/tag/v1.0).
-1. Copy the jar file to any location on your computer.\
+2. Download the latest `ip.jar` [here](https://github.com/dorianfong98/ip/releases/tag/v1.0).
+3. Copy the jar file to any location/folder on your computer.\
 *(Note: On the first launch of `ip.jar`, a save file will be created in the same directory
 as the jar file)*
-1. Open a new **terminal** window and navigate to the same directory where your `duke.jar` is located.
-1. Enter the **following command** into the **terminal** window to launch the application:
+4. Open a new *terminal* window and navigate to the same directory where your `duke.jar` is located.
+5. Enter the following command into the *terminal* window to launch the application:
 ````
 java -jar ip.jar
 ````
