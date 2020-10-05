@@ -20,7 +20,7 @@ Get focused, be productive, and do your best work today with Duke.
   * [Exiting the program: `bye`](#exiting-the-program-bye)
   * [Saving your data](#saving-your-data)
 * [FAQ](#faq)
-* [Command Summary](#command-summary)
+* [Command Summary](#summary-of-commands)
 
 ---
   
@@ -56,7 +56,7 @@ Here are some example commands you can try:
 ## Features 
 **Notes about the command format:**
 * **Words in `UPPER_CASE` are the parameters to be supplied by the user.**\
-e.g in `todo TASK_DESCRIPTION`, `TASK_DESCRIPTION` is a parameter which can be used as `todo Do work`.
+e.g in `todo TASK_DESCRIPTION`, `TASK_DESCRIPTION` is a parameter which can be used as `todo Prepare for test`.
 * **Items bounded by square brackets are optional.**\
 e.g. `/by ADDITIONAL_INFORMATION [DATE]` can be used as `/by next Mon 2020-12-25` or `/by next Mon`.
 * **Dates can be inputted in any order.**\
@@ -90,8 +90,13 @@ Format: `event TASK_DESCRIPTION /at ADDITIONAL_INFORMATION [DATE]`
 it will be saved as part of the description.
 
 **Examples:**
-* `event CS2113T Team meeting /at 8pm tonight` Adds event `CS2113T Team meeting (At: 8pm tognight)` to the task list.
-* `event Business Class /at 8-9pm, 2020-11-05` Adds another event `Business Class (At: 8-9pm, Nov 5 2021)` to the task list.
+* `event CS2113T Team meeting /at 8pm tonight` 
+
+Adds event `CS2113T Team meeting (At: 8pm tognight)` to the task list.
+
+* `event ACC1701X tutorial  /at 10.30-11.30am, 2020-11-05` 
+
+Adds another event `ACC1701X tutorial (At: 10.30-11.30am, Nov 5 2020)` to the task list.
 
 ![Event command image]()
 
@@ -107,8 +112,13 @@ Format: `deadline TASK_DESCRIPTION /by ADDITIONAL_INFORMATION [DATE]`
 it will be saved as part of the description.
 
 **Examples:**
-* `deadline Complete assignment /by This weekend` Adds deadline `Complete assignment (By: This weekend)` to the task list.
-* `deadline Pay NUS school fees /by 2020-10-31` Adds deadline `Pay NUS school fees (By: Oct 31 2020)`.
+* `deadline Complete assignment /by This weekend` 
+
+Adds deadline `Complete assignment (By: This weekend)` to the task list.
+
+* `deadline Pay NUS school fees /by 2020-10-31` 
+
+Adds deadline `Pay NUS school fees (By: Oct 31 2020)`.
 
 ![Deadline command image]()
 
@@ -131,7 +141,7 @@ Format: `done INDEX`
 * The index **must be a positive integer** e.g 1, 2, 3, ...
 
 **Example:**
-* `done 3` sets the second task from `list` as done.
+* `done 3` marks the third task on the `list` as done. Good job! :)
 
 ![Done command image]()
 
@@ -155,7 +165,7 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 ---
 
 ### Looking for all tasks on a date: `schedule`
-Finds all tasks in the task list that fall on the same date as the given date.\
+Finds all tasks in the task list that fall on a particular date.\
 Format: `schedule DATE`
 
 * The given date must be in the format of `YYYY-MM-DD`.
@@ -164,7 +174,7 @@ will not be returned.
 * Only the dates saved and linked to the task will be searched.
 
 **Examples:**
-* `schedule 2021-09-01` returns `Concert (At: 8-9pm, Jan 9 2021)` and `Buy gifts (By: Jan 9 2021)`
+* `schedule 2020-11-01` returns `Bro's ORD date (At: Nov 1 2020)` and `Prepare for presentation (By: Nov 1 2020)`
 
 ![Schedule command image]()
 
@@ -208,31 +218,31 @@ a new save file.
 ## FAQ
 **Q:** Can I move my save data to another location/Computer?\
 **A:** Yes you can. After downloading `Duke.jar` onto the other device, you can either:
-1. Place a copy of the current `Duke.txt` save file in the same directory of `Duke.jar` being launching 
-the application
-1. Replace the save file `Duke.txt` that was created by the program and found in the same directory as `Duke.jar`
+1. Create a copy of the current `Duke.txt` save file in the same directory of `Duke.jar` being launching 
+the application **OR**
+2. Replace the save file `Duke.txt` that was created by the program and found in the same directory as `Duke.jar`
 with your own save file.
 
 **Q:** Why does the `schedule` command not return a task that falls on the same date as the given date?\
-**A:** Please ensure when the original task was created, the date was input in the format of `YYYY-MM-DD`, after 
-the `/at` identifier for `event` command and `/by` for `deadline` command. When successful, the input date in the 
+**A:** Ensure that when the original task was created, your date was inputted in the required format of `YYYY-MM-DD`, after 
+the `/at` identifier for `event` command and `/by` for `deadline` command. If successful, the input date in the 
 `YYYY-MM-DD` format will be automatically reformatted into a `MMM-DD-YYYY` format.\
-*e.g `2022-03-04` will be reformatted into `Mar 04 2022` in the task description.*
+*e.g `2020-10-09` will be reformatted into `Oct 09 2020` in the task description.*
 
 ---
 
-## Command Summary
+## Summary of commands
 
-Command | Format, Examples
+Command | Formatting with Examples
 --------|-----------------
 **Help**|`help`
-**Todo**|`todo TASK_DESCRIPTION` e.g,`todo Read lecture notes`
-**Event**|`event TASK_DESCRIPTION /at ADDITIONAL_INFORMATION [DATE]` e.g,`event Team meeting /at 8pm tonight`
-**Deadline**|`deadline TASK_DESCRIPTION /by ADDITIONAL_INFORMATION [DATE]` e.g,`deadline Pay school fees /by 2020-10-31`
+**Todo**|`todo TASK_DESCRIPTION` e.g.,`todo Read lecture notes`
+**Event**|`event TASK_DESCRIPTION /at ADDITIONAL_INFORMATION [DATE]` e.g.,`event Team meeting /at 8pm tonight`
+**Deadline**|`deadline TASK_DESCRIPTION /by ADDITIONAL_INFORMATION [DATE]` e.g.,`deadline Pay school fees /by 2020-10-31`
 **List**|`list`
-**Done**|`done INDEX` e.g, `done 2`
-**Find**|`find KEYWORD [MORE_KEYWORDS]` e.g,`find notes`
-**Schedule**|`schedule DATE` e.g,`schedule 2020-12-04`
-**Delete**|`delete INDEX` e.g,`delete 2`
+**Done**|`done INDEX` e.g., `done 2`
+**Find**|`find KEYWORD [MORE_KEYWORDS]` e.g.,`find notes`
+**Schedule**|`schedule DATE` e.g.,`schedule 2020-12-04`
+**Delete**|`delete INDEX` e.g.,`delete 2`
 **Clear**|`clear`
 **Bye**|`bye`

@@ -171,7 +171,7 @@ public class Ui {
     public static void printSearchResults(ArrayList<Task> searchResults, String searchTerm) {
         int taskCount = 1;
         printSeparator();
-        System.out.println("Here are your search resultst for: " + searchTerm);
+        System.out.println("Here are your search results for: " + searchTerm);
         for (Task task : searchResults) {
             String taskNumber = " " + taskCount + ". ";
             System.out.println(taskNumber + task.toString());
