@@ -49,14 +49,35 @@ public class Ui {
     public static final String EXCEPTION_FILE_ERROR = "Oops! Something went wrong while creating a save file!";
     public static final String EXCEPTION_INVALID_TASK_NUMBER = "Invalid task number entered... Please try again!";
     public static final String EXCEPTION_DONE_EXPECTED_INTEGER =
-            "I'm sorry, I don't understand that ;-;. Please enter a number instead!";
-    public static final String EXCEPTION_FILE_WRITE_ERROR = "Oh no, something went wrong while saving!";
+            "I'm sorry, I don't understand that! Please enter a number instead.";
+    public static final String EXCEPTION_FILE_WRITE_ERROR = "Oops, something went wrong while saving!";
     public static final String EXCEPTION_INVALID_DATE_FORMAT = "Please enter date in this format:\n[YYYY-MM-DD]";
 
     /** Prints separator component after text is printed */
     public static void printSeparator() {
         System.out.println(MESSAGE_LINE_SEPARATOR);
     }
+
+    public static final String HELP_MENU =
+                    "Welcome to the help menu!\n"
+                    + "The following commands are available for Duke:\n"
+                    + "Note:\n"
+                    + " * Words in UPPER_CASE are the parameters to be supplied by the user\n"
+                    + " * Items in square brackets are optional, e.g [DATE]\n"
+                    + "\n"
+                    + "List of Available Commands:\n"
+                    + "help ------------------------ Displays all available commands on the terminal\n"
+                    + "todo DESCRIPTION ------------------------ Adds a todo task with a description\n"
+                    + "event DESCRIPTION /at DESCRIPTION [DATE] ----------------- Adds an event task\n"
+                    + "deadline DESCRIPTION /by DESCRIPTION [DATE ------------- Adds a deadline task\n"
+                    + "list ---------------------------- Displays all current tasks on the task list\n"
+                    + "find KEYWORD [KEYWORDS] ------------ Finds all tasks that contain the keyword\n"
+                    + "schedule DATE ----------------------------- Finds all tasks that fall on date\n"
+                    + "delete INDEX ------------------------ Deletes task at specified index of list\n"
+                    + "clear -------------------------------------- Deletes all tasks from task list\n"
+                    + "bye ------------------------------------------------------- Exits the program\n"
+                    + System.lineSeparator()
+                    + "For more details, visit: https://dorianfong98.github.io/ip/\n";
 
     /** Prints startup greet sequence */
     public void printStartupSequence() {
@@ -73,6 +94,13 @@ public class Ui {
         System.out.println(BYE_ART);
         System.out.println(MESSAGE_CLOSING);
         printSeparator();
+    }
+
+    /**
+     * Prints the help menu
+     */
+    public void showHelpMenu() {
+        System.out.println(HELP_MENU);
     }
 
     /** Reads user command and returns command */

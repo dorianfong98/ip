@@ -12,8 +12,8 @@ public class Parser {
      * The Parser class handles text parsing for Duke.
      */
     //Exception messages
-    public static final String EXCEPTION_EMPTY_FIELD = "Oh no... You have to enter a task number. Please try again!";
-    public static final String EXCEPTION_TIMEDEVENT_INTRO = "Oh no! ;-;\nThe ";
+    public static final String EXCEPTION_EMPTY_FIELD = "Oops!You have to enter a task number. Please try again!";
+    public static final String EXCEPTION_TIMEDEVENT_INTRO = "Oops! \nThe ";
     public static final String EXCEPTION_TIMEDEVENT_BODY =
             " command requires both description and time information in the format of: \n";
     public static final String EXCEPTION_TIMEDEVENT_DESCRIPTION = "[description] ";

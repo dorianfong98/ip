@@ -18,16 +18,16 @@ Get focused, be productive, and do your best work today with Duke.
   * [Deleting a task: `delete`](#deleting-a-task-delete)
   * [Clearing all tasks: `clear`](#clearing-all-tasks-clear)
   * [Exiting the program: `bye`](#exiting-the-program-bye)
-  * [Saving the data](#saving-the-data)
+  * [Saving your data](#saving-your-data)
 * [FAQ](#faq)
 * [Command Summary](#command-summary)
 
 ---
   
 ## Quick Start
-1. Ensure that you have Java `11` installed in your Computer.
-1. Download the latest `ip.jar` from [here](https://github.com/dorianfong98/ip/releases/tag/v1.0).
-1. Copy the jar file to a *suitable location* on your computer.\
+1. Ensure that you have installed Java `11`.
+1. Download the latest `ip.jar` [here](https://github.com/dorianfong98/ip/releases/tag/v1.0).
+1. Copy the jar file to any location on your computer.\
 *(Note: On the first launch of `ip.jar`, a save file will be created in the same directory
 as the jar file)*
 1. Open a new **terminal** window and navigate to the same directory where your `duke.jar` is located.
@@ -43,8 +43,8 @@ You will be greeted with a welcome screen from Duke on successful launch.
 to execute commands. e.g. typing `help` and pressing enter will bring up all available commands.\
 Here are some example commands you can try:
     * `help`: Brings up all available commands.
-    * `todo Buy some bread`: Adds a todo task with description `Buy some bread` to the task list.
-    * `event concert /at Stadium 2021-01-09`: Adds an event with description `concert (At: Stadium Jan 9 2021)` 
+    * `todo Buy lunch`: Adds a todo task with description `Buy lunch` to the task list.
+    * `event Coffee Date /at Starbucks 2020-11-09`: Adds an event with description `Coffee Date (At: Starbucks Nov 9 2020)` 
     to the task list.
     * `list`: Lists all available tasks.
     * `delete 1`: Deletes 1st task shown in list.
@@ -57,10 +57,10 @@ Here are some example commands you can try:
 **Notes about the command format:**
 * **Words in `UPPER_CASE` are the parameters to be supplied by the user.**\
 e.g in `todo TASK_DESCRIPTION`, `TASK_DESCRIPTION` is a parameter which can be used as `todo Do work`.
-* **Items in square brackets are optional.**\
-e.g. `/by ADDITIONAL_INFORMATION [DATE]` can be used as `/by This Friday 2021-02-07` or `/by This Friday`.
-* **Dates can be input in any order.**\
-As long as the date is input in the correct `YYYY-MM-DD` format, and comes after the `/by` or `/at` tags.
+* **Items bounded by square brackets are optional.**\
+e.g. `/by ADDITIONAL_INFORMATION [DATE]` can be used as `/by next Mon 2020-12-25` or `/by next Mon`.
+* **Dates can be inputted in any order.**\
+But ensure that you use the **required `YYYY-MM-DD` format** when inputting dates, and that they are placed after `/by` or `/at` tags.
 
 ---
 ### Viewing help: `help`
@@ -76,8 +76,8 @@ Adds a todo task to the task list without any additional information.\
 Format: `todo TASK_DESCRIPTION`
 
 **Examples:**
-* `todo Call up a friend` Adds a todo task `Call up a friend` to the task list.
-* `todo Watch videos` Adds another todo task `Watch videos` to the task list.
+* `todo Email Thomas` Adds a todo task `Email Thomas` to the task list.
+* `todo Attempt CG2027 Assignment` Adds another todo task `Attempt CG2027 Assignment` to the task list.
 
 ---
 
@@ -90,8 +90,8 @@ Format: `event TASK_DESCRIPTION /at ADDITIONAL_INFORMATION [DATE]`
 it will be saved as part of the description.
 
 **Examples:**
-* `event Team meeting /at 8pm tonight` Adds event `Team meeting (At: 8pm tognight)` to the task list.
-* `event Concert /at 8-9pm, 2021-01-09` Adds another event `Concert (At: 8-9pm, Jan 9 2021)` to the task list.
+* `event CS2113T Team meeting /at 8pm tonight` Adds event `CS2113T Team meeting (At: 8pm tognight)` to the task list.
+* `event Business Class /at 8-9pm, 2020-11-05` Adds another event `Business Class (At: 8-9pm, Nov 5 2021)` to the task list.
 
 ![Event command image]()
 
@@ -107,8 +107,8 @@ Format: `deadline TASK_DESCRIPTION /by ADDITIONAL_INFORMATION [DATE]`
 it will be saved as part of the description.
 
 **Examples:**
-* `deadline Return books /by This weekend` Adds deadline `Return books (By: This weekend)` to the task list.
-* `deadline Pay bills /by 2022-04-13` Adds deadline `Pay bills (By: Apr 13 2022)`.
+* `deadline Complete assignment /by This weekend` Adds deadline `Complete assignment (By: This weekend)` to the task list.
+* `deadline Pay NUS school fees /by 2020-10-31` Adds deadline `Pay NUS school fees (By: Oct 31 2020)`.
 
 ![Deadline command image]()
 
@@ -131,7 +131,7 @@ Format: `done INDEX`
 * The index **must be a positive integer** e.g 1, 2, 3, ...
 
 **Example:**
-* `done 2` sets the second task from `list` as done.
+* `done 3` sets the second task from `list` as done.
 
 ![Done command image]()
 
@@ -141,14 +141,14 @@ Format: `done INDEX`
 Finds all tasks in the task list that contain the given keywords.\
 Format: `find KEYWORD [MORE_KEYWORDS]`
 
-* The search **is** case-sensitive: `books` will **not** match `Books`
-* The search will follow the order of the keywords: `Buy Bread` will **not** match `Bread Buy`
-* Only tasks containing all keywords in the correct order will be returned.
-* Only full words will be matched: `Song` will not match `Songs`
+* The search is **case-sensitive**: `books` will **not** match `Books`
+* The search will **follow the order of the search terms**: `email prof` will **not** match `prof email`
+* Only tasks containing **all keywords** in the **correct order** will be returned.
+* Only **full words** will be matched: `Song` will not match `Songs`
 * Only the description is searched.
 
 **Examples:**
-* `find buy bread` returns `buy bread (By: Next morning)` and `Go and buy bread`
+* `find read notes` returns `read notes (By: Tomorrow morning)` and `read notes for ACC1701X`
 
 ![Find command image]()
 
@@ -198,7 +198,7 @@ Format: `bye`
 
 ---
 
-### Saving the data
+### Saving your data
 All data entered into Duke is saved onto the hard disk automatically after any command that changes the data. Hence, there is
 no need to manually save the data. When no save file is detected on startup, the program will automatically create 
 a new save file.
@@ -226,13 +226,13 @@ the `/at` identifier for `event` command and `/by` for `deadline` command. When 
 Command | Format, Examples
 --------|-----------------
 **Help**|`help`
-**Todo**|`todo TASK_DESCRIPTION` e.g,`todo Watch videos`
+**Todo**|`todo TASK_DESCRIPTION` e.g,`todo Read lecture notes`
 **Event**|`event TASK_DESCRIPTION /at ADDITIONAL_INFORMATION [DATE]` e.g,`event Team meeting /at 8pm tonight`
-**Deadline**|`deadline TASK_DESCRIPTION /by ADDITIONAL_INFORMATION [DATE]` e.g,`deadline Pay bills /by 2022-04-13`
+**Deadline**|`deadline TASK_DESCRIPTION /by ADDITIONAL_INFORMATION [DATE]` e.g,`deadline Pay school fees /by 2020-10-31`
 **List**|`list`
 **Done**|`done INDEX` e.g, `done 2`
-**Find**|`find KEYWORD [MORE_KEYWORDS]` e.g,`find bread`
-**Schedule**|`schedule DATE` e.g,`schedule 2021-01-09`
-**Delete**|`delete INDEX` e.g,`delete 3`
+**Find**|`find KEYWORD [MORE_KEYWORDS]` e.g,`find notes`
+**Schedule**|`schedule DATE` e.g,`schedule 2020-12-04`
+**Delete**|`delete INDEX` e.g,`delete 2`
 **Clear**|`clear`
 **Bye**|`bye`

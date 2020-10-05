@@ -54,6 +54,9 @@ public class Duke {
             command = parse.determineCommand(splitUserInput);
             try {
                 switch (command) {
+                case "help":
+                    ui.showHelpMenu();
+                    break;
                 case "bye":
                     isFinished = true;
                     break;

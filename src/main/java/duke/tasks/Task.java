@@ -5,8 +5,8 @@ package duke.tasks;
  */
 public abstract class Task {
 
-    public static final String TICK_ICON = "\u2713";
-    public static final String CROSS_ICON = "\u2718";
+    public static final String TICK_ICON = "Y";
+    public static final String CROSS_ICON = "N";
 
     protected String description;
     protected boolean isDone;
