@@ -98,7 +98,7 @@ Adds event `CS2113T Team meeting (At: 8pm tognight)` to the task list.
 
 Adds another event `ACC1701X tutorial (At: 10.30-11.30am, Nov 5 2020)` to the task list.
 
-![Event command image]()
+![Event command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/event.png)
 
 ---
 
@@ -120,7 +120,7 @@ Adds deadline `Complete assignment (By: This weekend)` to the task list.
 
 Adds deadline `Pay NUS school fees (By: Oct 31 2020)`.
 
-![Deadline command image]()
+![Deadline command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/deadline.png)
 
 ---
 
@@ -158,9 +158,11 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 * Only the description is searched.
 
 **Examples:**
-* `find read notes` returns `read notes (By: Tomorrow morning)` and `read notes for ACC1701X`
+* `find read notes` 
 
-![Find command image]()
+returns `read notes (By: Tomorrow morning)` and `read notes for ACC1701X`
+
+![Find command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/find.png)
 
 ---
 
@@ -174,9 +176,11 @@ will not be returned.
 * Only the dates saved and linked to the task will be searched.
 
 **Examples:**
-* `schedule 2020-11-01` returns `Bro's ORD date (At: Nov 1 2020)` and `Prepare for presentation (By: Nov 1 2020)`
+* `schedule 2020-11-01` 
 
-![Schedule command image]()
+returns `Bro's ORD date (At: Nov 1 2020)` and `Prepare for presentation (By: Nov 1 2020)`
+
+![Schedule command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/schedule.png)
 
 ---
 
@@ -189,9 +193,14 @@ Format: `delete INDEX`
 * The index **must be a positive integer** e.g 1, 2, 3, ...
 
 **Examples:**
-* `delete 1` deletes the first task from `list`
+* `delete 1` 
+
+deletes the first task from `list`
 ![Delete1 command image]()
-* `delete 3` deletes the third task from `list`
+
+* `delete 3` 
+
+deletes the third task from `list`
 ![Delete3 command image]()
 
 ---
