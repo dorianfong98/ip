@@ -43,13 +43,14 @@ You will be greeted with a welcome screen from Duke on successful launch.
 6. Type a command into the *terminal* window and press Enter to execute it. e.g. typing `help` and pressing Enter will display a list of available commands
 
 Some examples of commands that you can try:
-    * `help`: Displays a list of all available commands.
-    * `todo Print notes`: Adds a todo task with its description, `Print notes`, to your current task list.
-    * `event Coffee Date /at Starbucks 2020-11-09`: Adds an event with description `Coffee Date (At: Starbucks Nov 9 2020)` 
+
+   * `help`: Displays a list of all available commands.
+   * `todo Print notes`: Adds a todo task with its description, `Print notes`, to your current task list.
+   * `event Coffee Date /at Starbucks 2020-11-09`: Adds an event with description `Coffee Date (At: Starbucks Nov 9 2020)` 
     to the task list.
-    * `list`: Lists all available tasks.
-    * `delete 1`: Deletes 1st task shown in list.
-    * `bye`: Exits the program.
+   * `list`: Lists all available tasks.
+   * `delete 1`: Deletes 1st task shown in list.
+   * `bye`: Exits the program.
 7. Refer to the [Features](#features) section below for further details of each command.
 
 ---
