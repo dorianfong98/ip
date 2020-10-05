@@ -228,7 +228,7 @@ a new save file.
 ---
 
 ## FAQs
-**Q:** Why does the `schedule` command not work? Why doesn't it return the task that falls on the date I'm searching for
+**Q:** Why does the `schedule` command not work? Why doesn't it return the task that falls on the date I'm searching for?
 
 **A:** Check that for the task in question, you had inputted the date in the required format of `YYYY-MM-DD`, after 
 the `/at` identifier for `event` command and `/by` for `deadline` command. If successful, the input date in the 
