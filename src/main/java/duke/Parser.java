@@ -7,10 +7,10 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
+/**
+ * The Parser class handles text parsing for Duke.
+ */
 public class Parser {
-    /**
-     * The Parser class handles text parsing for Duke.
-     */
     //Exception messages
     public static final String EXCEPTION_EMPTY_FIELD = "Oops!You have to enter a task number. Please try again!";
     public static final String EXCEPTION_TIMEDEVENT_INTRO = "Oops! \nThe ";

@@ -19,7 +19,7 @@ Get focused, be productive, and do your best work today with Duke.
   * [Clearing all tasks: `clear`](#clearing-all-tasks-clear)
   * [Exiting the program: `bye`](#exiting-the-program-bye)
   * [Saving your data](#saving-your-data)
-* [FAQ](#faq)
+* [FAQs](#faqs)
 * [Command Summary](#command-summary)
 
 ---
@@ -224,12 +224,17 @@ a new save file.
 
 ---
 
-## FAQ
-**Q:** Why does the `schedule` command not return a task that falls on the same date as the given date?\
+## FAQs
+**Q:** Why does the `schedule` command not work? Why doesn't it return the task that falls on the date I'm searching for
 **A:** Check that for the task in question, you had inputted the date in the required format of `YYYY-MM-DD`, after 
 the `/at` identifier for `event` command and `/by` for `deadline` command. If successful, the input date in the 
 `YYYY-MM-DD` format will be automatically reformatted into a `MMM-DD-YYYY` format.\
 *e.g `2020-10-09` will be reformatted into `Oct 09 2020` in the task description.*
+
+**Q:** Why am I receiving an ArrayOutOfBounds Error when Duke ran fine the last time I ran it?
+**A:** Try deleting the existing Duke.txt file in the directory of your ip.jar and run `java -jar ip.jar` in your terminal again. 
+
+If you require any more technical assistance with Duke, feel free to contact the developer at [dorianfong@u.nus.edu](mailto:dorianfong@u.nus.edu). 
 
 ---
 
