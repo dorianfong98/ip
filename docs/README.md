@@ -1,4 +1,4 @@
-<title>User Guide | Duke iP </title>
+%User Guide | Duke iP
 
 # User Guide
 Welcome to Duke!
