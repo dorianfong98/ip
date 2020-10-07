@@ -19,7 +19,7 @@ public class Duke {
     public static final String MESSAGE_TASK_DELETED = "Noted. I've removed this task from the list:";
 
     //Exception Messages
-    public static final String EXCEPTION_INVALID_COMMAND = "I do not know what that means ;-;, please try again!";
+    public static final String EXCEPTION_INVALID_COMMAND = "I don't understand what that means, please try again!";
 
     private Storage storage;
     private TaskList tasks;
