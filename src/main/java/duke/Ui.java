@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * This UI class manages the user interface and the messages being printed to the user
+ * The UI class manages the user interface of Duke such as the messages being printed to the user
  */
 public class Ui {
 
@@ -36,7 +36,7 @@ public class Ui {
     public static final String MESSAGE_WELCOME_TO = "Welcome to\n";
     public static final String MESSAGE_INTRO_GREETING = " Hello! I'm Duke";
     public static final String MESSAGE_INTRO_DUKE_QUERY = " What can I do for you?";
-    public static final String MESSAGE_CLOSING = " Hope to see you again soon!";
+    public static final String MESSAGE_EXIT = " Hope to see you again soon!";
     public static final String MESSAGE_DOUBLE_WHITESPACE = "   ";
     public static final String MESSAGE_LINE_SEPARATOR =
             "______________________________________________________________________________";
@@ -44,6 +44,7 @@ public class Ui {
     public static final String MESSAGE_IN_THE_LIST = " in the list.";
     public static final String MESSAGE_ERROR_TASK_UNAVAILABLE = "There are no tasks available for now. Add a task to continue.";
     public static final String MESSAGE_TASKS_IN_LIST = " Here are the tasks in your list: ";
+    public static final String MESSAGE_CLEAR_CONFIRMED = "All your tasks in the list have been cleared.";
 
     //Exception error messages
     public static final String EXCEPTION_FILE_ERROR = "Oops! Something went wrong while creating a save file!";
@@ -52,6 +53,10 @@ public class Ui {
             "I'm sorry, I don't understand that! Please enter a number instead.";
     public static final String EXCEPTION_FILE_WRITE_ERROR = "Oops, something went wrong while saving!";
     public static final String EXCEPTION_INVALID_DATE_FORMAT = "Please enter date in this format:\n[YYYY-MM-DD]";
+    public static final String EXCEPTION_FAILED_FILE_CLEAR = "Oops, we encountered an error while clearing the file. Please try again or manually clear it!";
+
+    // @@author dorianfong98-reused
+    // Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/components/Ui.java with minor modifications
 
     /** Prints separator component after text is printed */
     public static void printSeparator() {
@@ -77,9 +82,10 @@ public class Ui {
                     + "clear --------------------------------------------- Deletes all current tasks\n"
                     + "bye ------------------------------------------------------- Exits the program\n"
                     + System.lineSeparator()
-                    + "For more details, visit: https://dorianfong98.github.io/ip/\n";
+                    + "For more information, refer to the complete User Guide at:\n"
+                    + "https://dorianfong98.github.io/ip/\n";
 
-    /** Prints startup greet sequence */
+    /** Prints program startup sequence */
     public void printStartupSequence() {
         System.out.println(MESSAGE_WELCOME_TO + DUKE_ART);
         printSeparator();
@@ -88,11 +94,11 @@ public class Ui {
         printSeparator();
     }
 
-    /** Prints closing sequence */
-    public void printClosingSequence() {
+    /** Prints exit sequence */
+    public void printExitSequence() {
         printSeparator();
         System.out.println(BYE_ART);
-        System.out.println(MESSAGE_CLOSING);
+        System.out.println(MESSAGE_EXIT);
         printSeparator();
     }
 
@@ -200,8 +206,24 @@ public class Ui {
         System.out.println(EXCEPTION_FILE_WRITE_ERROR);
     }
 
+    /**
+     * Prints message when writing to a file to clear it fails.
+     */
+    public void showFileClearError() {
+        System.out.println(EXCEPTION_FAILED_FILE_CLEAR);
+    }
+
     public static void showInvalidDateFormatError() {
         System.out.println(EXCEPTION_INVALID_DATE_FORMAT);
     }
+
+    /**
+     * Prints confirmation message for taskList being cleared.
+     */
+    public void printClearTaskListConfirmation() {
+        printSeparator();
+        System.out.println(MESSAGE_CLEAR_CONFIRMED);
+    }
+    //@@author
 
 }

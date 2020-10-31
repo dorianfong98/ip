@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class Storage {
 
     //File Path and other constants
-    public static final String SAVE_DELIMITER = "--";
+    public static final String DELIMITER = " | ";
     public static final String FILE_MESSAGE_CREATED_SUCCESS = "Save file successfully created!";
     public static final String FILE_MESSAGE_NO_SAVE_DETECTED = "No previous saves detected! Creating save file...";
     public static final String TODO_ICON = "[T]";
@@ -26,9 +26,13 @@ public class Storage {
     public static final String BLANK_STRING = "";
 
     private final String filePath;
+    private Ui ui;
 
+    // @@author dorianfong98-reused
+    // Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/components/Storage.java with minor modifications
     public Storage(String filePath) {
         this.filePath = filePath;
+        ui = new Ui();
     }
 
     /**
@@ -44,26 +48,26 @@ public class Storage {
             //Re-create task objects in the array
             while (fileScanner.hasNext()) {
                 String taskInformation = fileScanner.nextLine();
-                String[] taskComponents = taskInformation.split(SAVE_DELIMITER);
+                String[] taskComponents = taskInformation.split("\\s*[|]\\s*");
                 String taskIcon = taskComponents[0];
                 String taskStatus = taskComponents[1];
                 String taskDescription = taskComponents[2];
                 String taskTimingInformation;
                 String taskDate;
                 switch (taskIcon) {
-                case TODO_ICON:
-                    taskList.add(new Todo(taskDescription));
-                    break;
-                case DEADLINE_ICON:
-                    taskTimingInformation = taskComponents[3];
-                    taskDate = taskComponents[4];
-                    taskList.add(new Deadline(taskDescription, taskTimingInformation, taskDate));
-                    break;
-                case EVENT_ICON:
-                    taskTimingInformation = taskComponents[3];
-                    taskDate = taskComponents[4];
-                    taskList.add(new Event(taskDescription, taskTimingInformation, taskDate));
-                    break;
+                    case TODO_ICON:
+                        taskList.add(new Todo(taskDescription));
+                        break;
+                    case DEADLINE_ICON:
+                        taskTimingInformation = taskComponents[3];
+                        taskDate = taskComponents[4];
+                        taskList.add(new Deadline(taskDescription, taskTimingInformation, taskDate));
+                        break;
+                    case EVENT_ICON:
+                        taskTimingInformation = taskComponents[3];
+                        taskDate = taskComponents[4];
+                        taskList.add(new Event(taskDescription, taskTimingInformation, taskDate));
+                        break;
                 }
                 //Set status of task to done if required
                 if (Integer.parseInt(taskStatus) == 1) {
@@ -88,9 +92,7 @@ public class Storage {
      */
     public void writeToFile(ArrayList<Task> tasks) throws IOException {
         //Clearing file before writing
-        FileWriter fwClear = new FileWriter(filePath);
-        fwClear.write(BLANK_STRING);
-        fwClear.close();
+        clearFile();
 
         //Append information into file
         FileWriter fileWriter = new FileWriter(filePath, true);
@@ -104,10 +106,24 @@ public class Storage {
             }
             //Create text string to write so save file
             String taskToSave = task.getTaskIcon() + " | " + taskStatus + " | "
-                    + task.getDescription() + " | " + task.getTimingInformation() + " | "
+                    + task.getDescription() + " | " + task.getTime() + " | "
                     + task.getDate() +System.lineSeparator();
             fileWriter.write(taskToSave);
         }
         fileWriter.close();
     }
+
+    /**
+     * Deletes all data written to the Walter.txt save file.
+     */
+    public void clearFile() {
+        try {
+            FileWriter fwClear = new FileWriter(filePath);
+            fwClear.write(BLANK_STRING);
+            fwClear.close();
+        } catch (IOException e) {
+            ui.showFileClearError();
+        }
+    }
+    //@@author
 }

@@ -2,6 +2,8 @@ package duke.tasks;
 
 import java.time.LocalDate;
 
+// @@author dorianfong98-reused
+// Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/tasks/Deadline.java with minor modifications
 /**
  * The duke.tasks.Deadline class inherits from the duke.tasks.Task class and is used to create deadline objects
  */
@@ -23,7 +25,7 @@ public class Deadline extends Task {
         return DEADLINE_ICON;
     }
 
-    public String getTimingInformation() {
+    public String getTime() {
         return by;
     }
 
@@ -36,3 +38,4 @@ public class Deadline extends Task {
         return DEADLINE_ICON + super.toString() + MESSAGE_INFO_START + by + MESSAGE_INFO_END;
     }
 }
+//@@author

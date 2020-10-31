@@ -2,6 +2,8 @@ package duke.tasks;
 
 import java.time.LocalDate;
 
+// @@author dorianfong98-reused
+// Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/tasks/Todo.java with minor modifications
 /**
  * The duke.tasks.Todo class inherits from the duke.tasks.Task class and is used to create todo objects
  */
@@ -22,7 +24,7 @@ public class Todo extends Task {
         return TODO_ICON;
     }
 
-    public String getTimingInformation() {
+    public String getTime() {
         return TIME_INFO;
     }
 
@@ -35,3 +37,4 @@ public class Todo extends Task {
         return TODO_ICON + super.toString();
     }
 }
+//@@author

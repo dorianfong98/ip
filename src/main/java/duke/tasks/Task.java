@@ -1,5 +1,7 @@
 package duke.tasks;
 
+// @@author dorianfong98-reused
+// Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/tasks/Task.java with minor modifications
 /**
  * The duke.tasks.Task class provides a template for the duke.tasks.Task object where description and status is stored
  */
@@ -34,7 +36,7 @@ public abstract class Task {
 
     public abstract String getTaskIcon();
 
-    public abstract String getTimingInformation();
+    public abstract String getTime();
 
     public abstract String getDate();
 
@@ -43,3 +45,4 @@ public abstract class Task {
         return "[" + getStatusIcon() + "] " + description;
     }
 }
+//@@author

@@ -16,12 +16,13 @@ import static java.util.stream.Collectors.toList;
  * This TaskList class manages the features of the individual tasks of the taskList.
  */
 public class TaskList {
-
+    // @@author dorianfong98-reused
+    // Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/components/TaskList.java with minor modifications
     public static final String BLANK_SPACE = "";
 
-    public static final String EXCEPTION_EMPTY_TODO = "Oh no! The description of the todo cannot be empty ;-;";
-    public static final String EXCEPTION_EMPTY_DATE = "Oh no! The please enter a date in YYYY-MM-DD format!";
-    public static final String EXCEPTION_EMPTY_SEARCHTERM = "Oh no! The search term cannot be empty!";
+    public static final String EXCEPTION_EMPTY_TODO = "Description of the todo cannot be empty!";
+    public static final String EXCEPTION_EMPTY_DATE = "Please enter a date in YYYY-MM-DD format!";
+    public static final String EXCEPTION_EMPTY_SEARCHTERM = "Search term cannot be empty!";
 
     public static final String DEFAULT_DATE = "9999-12-31";
     public static final String DATE_FORMAT = "MMM d yyyy";
@@ -29,7 +30,6 @@ public class TaskList {
     public static final String COMMAND_TODO = "todo";
     public static final String COMMAND_FIND = "find";
     public static final String COMMAND_SCHEDULE = "schedule";
-
 
     public ArrayList<Task> taskList;
 
@@ -160,4 +160,11 @@ public class TaskList {
         return deleteItemDetails;
     }
 
+    /**
+     * Deletes all tasks currently on task list.
+     */
+    public void clearTaskList() {
+        taskList.clear();
+    }
+    //@@author
 }
