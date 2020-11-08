@@ -224,6 +224,58 @@ public class Ui {
         printSeparator();
         System.out.println(MESSAGE_CLEAR_CONFIRMED);
     }
+
+    public void printTodoList(ArrayList<Task> tasks) {
+        int taskNumber = 1;
+        printSeparator();
+        if (tasks.size() == 0) {
+            System.out.println(MESSAGE_ERROR_TASK_UNAVAILABLE);
+            return;
+        }
+        System.out.println(MESSAGE_TASKS_IN_LIST);
+        for (Task task : tasks) {
+            if (task.getTaskIcon() == "[T]") {
+                System.out.println(" " + taskNumber + "." + task);
+                taskNumber++;
+            }
+        }
+        printSeparator();
+    }
+
+    public void printDeadlineList(ArrayList<Task> tasks) {
+        int taskNumber = 1;
+        printSeparator();
+        if (tasks.size() == 0) {
+            System.out.println(MESSAGE_ERROR_TASK_UNAVAILABLE);
+            return;
+        }
+        System.out.println(MESSAGE_TASKS_IN_LIST);
+        for (Task task : tasks) {
+            if (task.getTaskIcon() == "[D]") {
+                System.out.println(" " + taskNumber + "." + task);
+                taskNumber++;
+            }
+        }
+        printSeparator();
+    }
+
+
+    public void printEventList(ArrayList<Task> tasks) {
+        int taskNumber = 1;
+        printSeparator();
+        if (tasks.size() == 0) {
+            System.out.println(MESSAGE_ERROR_TASK_UNAVAILABLE);
+            return;
+        }
+        System.out.println(MESSAGE_TASKS_IN_LIST);
+        for (Task task : tasks) {
+            if (task.getTaskIcon() == "[E]") {
+                System.out.println(" " + taskNumber + "." + task);
+                taskNumber++;
+            }
+        }
+        printSeparator();
+    }
     //@@author
 
 }

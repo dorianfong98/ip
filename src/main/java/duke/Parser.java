@@ -7,6 +7,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
+
+// @@author dorianfong98-reused
+// Reused from https://github.com/dojh111/ip/blob/master/src/main/java/walter/tasks/Deadline.java with minor modifications
 /**
  * The Parser class handles text parsing for Duke.
  */
@@ -157,3 +160,4 @@ public class Parser {
         return splitUserInput[0];
     }
 }
+//@@author

@@ -66,6 +66,15 @@ public class Duke {
                 case "list":
                     ui.printTaskList(tasks.getTaskList());
                     break;
+                case "todos":
+                    ui.printTodoList(tasks.getTaskList());
+                    break;
+                case "deadlines":
+                    ui.printDeadlineList(tasks.getTaskList());
+                    break;
+                case "events":
+                    ui.printEventList(tasks.getTaskList());
+                    break;
                 case "done":
                     details = tasks.setTaskAsDone(splitUserInput);
                     ui.printSetDeleteConfirmMessage(MESSAGE_TASK_MARKED, details);
