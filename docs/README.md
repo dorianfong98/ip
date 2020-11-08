@@ -12,6 +12,9 @@ Get focused, be productive, and do your best work today with Duke.
   * [Adding an event task: `event`](#adding-an-event-task-event)
   * [Adding a deadline task: `deadline`](#adding-a-deadline-task-deadline)
   * [Viewing all tasks: `list`](#viewing-all-tasks-list)
+    * [Viewing all todo tasks: `todos`](#viewing-all-todo-tasks-todos)
+    * [Viewing all deadlines: `deadlines`](#viewing-all-deadlines-deadlines)
+    * [Viewing all events: `events`](#viewing-all-events-events)
   * [Marking a task as done: `done`](#marking-a-task-as-done-done)
   * [Looking for a task: `find`](#looking-for-a-task-find)
   * [Looking for all tasks on a date: `schedule`](#looking-for-all-tasks-on-a-date-schedule)
@@ -130,6 +133,15 @@ Adds deadline `Pay NUS school fees (By: Oct 31 2020)`.
 ### Viewing all tasks: `list`
 Displays all available tasks on the task list.\
 Format: `list`
+#### Viewing all Todo tasks: `todos`
+Displays all available todo tasks on the task list.\
+Format: `todos`
+#### Viewing all Deadlines: ` deadlines`
+Displays all deadlines on the task list.\
+Format: `deadlines`
+#### Viewing all Events: `events`
+Displays all available events on the task list.\
+Format: `events`
 
 ![list command image](https://raw.githubusercontent.com/dorianfong98/ip/master/docs/images/list.png)
 
