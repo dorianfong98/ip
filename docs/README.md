@@ -136,7 +136,7 @@ Format: `list`
 #### Viewing all Todo tasks: `todos`
 Displays all available todo tasks on the task list.\
 Format: `todos`
-#### Viewing all Deadlines: ` deadlines`
+#### Viewing all Deadlines: `deadlines`
 Displays all deadlines on the task list.\
 Format: `deadlines`
 #### Viewing all Events: `events`
