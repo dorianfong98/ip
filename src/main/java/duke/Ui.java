@@ -44,6 +44,9 @@ public class Ui {
     public static final String MESSAGE_IN_THE_LIST = " in the list.";
     public static final String MESSAGE_ERROR_TASK_UNAVAILABLE = "There are no tasks available for now. Add a task to continue.";
     public static final String MESSAGE_TASKS_IN_LIST = " Here are the tasks in your list: ";
+    public static final String MESSAGE_TODOS_IN_LIST = " Here are your todos: ";
+    public static final String MESSAGE_DEADLINES_IN_LIST = " Here are your deadlines: ";
+    public static final String MESSAGE_EVENTS_IN_LIST = " Here are your events: ";
     public static final String MESSAGE_CLEAR_CONFIRMED = "All your tasks in the list have been cleared.";
 
     //Exception error messages
@@ -232,7 +235,7 @@ public class Ui {
             System.out.println(MESSAGE_ERROR_TASK_UNAVAILABLE);
             return;
         }
-        System.out.println(MESSAGE_TASKS_IN_LIST);
+        System.out.println(MESSAGE_TODOS_IN_LIST);
         for (Task task : tasks) {
             if (task.getTaskIcon() == "[T]") {
                 System.out.println(" " + taskNumber + "." + task);
@@ -249,7 +252,7 @@ public class Ui {
             System.out.println(MESSAGE_ERROR_TASK_UNAVAILABLE);
             return;
         }
-        System.out.println(MESSAGE_TASKS_IN_LIST);
+        System.out.println(MESSAGE_DEADLINES_IN_LIST);
         for (Task task : tasks) {
             if (task.getTaskIcon() == "[D]") {
                 System.out.println(" " + taskNumber + "." + task);
@@ -267,7 +270,7 @@ public class Ui {
             System.out.println(MESSAGE_ERROR_TASK_UNAVAILABLE);
             return;
         }
-        System.out.println(MESSAGE_TASKS_IN_LIST);
+        System.out.println(MESSAGE_EVENTS_IN_LIST);
         for (Task task : tasks) {
             if (task.getTaskIcon() == "[E]") {
                 System.out.println(" " + taskNumber + "." + task);
